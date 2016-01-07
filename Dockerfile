@@ -2,6 +2,7 @@ FROM		dataman/hadoop-base:2.7.1
 MAINTAINER Weitao Zhou <wtzhou@dataman-inc.com>
 
 ENV     	HDFS_NAMENODE_ROOT_DIR=/var/hdfs/namenode
+ENV             JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
 
 ADD		conf/core-site.xml	${HADOOP_INSTALL_DIR}/etc/hadoop/core-site.xml
 ADD		conf/hdfs-site.xml	${HADOOP_INSTALL_DIR}/etc/hadoop/hdfs-site.xml
