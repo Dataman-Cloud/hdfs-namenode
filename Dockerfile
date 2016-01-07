@@ -16,6 +16,8 @@ VOLUME		["${HDFS_NAMENODE_ROOT_DIR}"]
 
 EXPOSE 8020 50070 50470
 
+RUN chmod a+x /usr/local/sbin/docker-entrypoint.sh
+
 ENTRYPOINT ["/usr/local/sbin/docker-entrypoint.sh"]
 
 CMD ["bin/hdfs", "namenode"]
